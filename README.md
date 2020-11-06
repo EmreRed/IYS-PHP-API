@@ -6,7 +6,7 @@ iys.org.tr PHP API Sınıfıdır.
 ```php
 IYS::auth($username, $password);
 ```
-`$username`: IYS API Kullanıcı Adı
+`$username`: IYS API Kullanıcı Adı  
 `$password`: IYS API Parolası
 
 ---
