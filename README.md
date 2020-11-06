@@ -8,6 +8,7 @@ IYS::auth($username, $password);
 ```
 `$username`: IYS API Kullanıcı Adı
 `$password`: IYS API Parolası
+
 ---
 
 #### DİĞER PARAMETRELER
