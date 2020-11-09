@@ -1,4 +1,4 @@
-# İleti Yönetim Sistemi (iys.org.tr) PHP API
+# İleti Yönetim Sistemi (iys.org.tr) PHP API Client
 
 iys.org.tr PHP API Sınıfıdır.
 
