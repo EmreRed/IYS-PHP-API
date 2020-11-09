@@ -4,10 +4,13 @@ iys.org.tr PHP API Sınıfıdır.
 
 #### AUTH
 ```php
-IYS::auth($username, $password);
+$iys = new IYS($username, $password, $iyscode);
+/* veya */
+IYS::auth($username, $password, $iyscode);
 ```
-`$username`: IYS API Kullanıcı Adı  
-`$password`: IYS API Parolası
+`$username`: IYS API Kullanıcı Adı *
+`$password`: IYS API Parolası *
+`$iyscode` : IYS Numarası
 
 ---
 
