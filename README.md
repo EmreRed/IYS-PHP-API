@@ -1,6 +1,6 @@
 # İleti Yönetim Sistemi (iys.org.tr) PHP API Client
 
-iys.org.tr PHP API Sınıfıdır.
+iys.org.tr için PHP API Sınıfıdır.
 
 #### AUTH
 ```php
@@ -11,6 +11,15 @@ IYS::auth($username, $password, $iyscode);
 `$username`: IYS API Kullanıcı Adı *
 `$password`: IYS API Parolası *
 `$iyscode` : IYS Numarası
+
+---
+
+#### BRAND
+```php
+IYS::brand($iysCode);
+```
+`$iysCode`: Hizmet sağlayıcı İYS Numarası
+(Girilmezse yetkili tüm markalar listelenir)
 
 ---
 

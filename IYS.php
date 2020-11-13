@@ -17,8 +17,10 @@ class IYS {
     if($username!=null && $password!=null) self::auth($username, $password, $iyscode=null);
   }
 
-  public static function brands(){
-    return self::call('integrator/'.self::$_iyscode.'/sps');
+  public static function brand($iysCode=''){
+    if(!empty($iysCode)) $iysCode = "/$iysCode";
+    $call = self::call("integrator/".self::$_iyscode."/sps$iysCode");
+    return $call !== false ? $call->list : false;
   }
 
   public static function auth($username, $password, $iyscode=null){
