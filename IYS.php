@@ -20,7 +20,7 @@ class IYS {
   public static function brand($iysCode=''){
     if(!empty($iysCode)) $iysCode = "/$iysCode";
     $call = self::call("integrator/".self::$_iyscode."/sps$iysCode");
-    return $call !== false ? $call->list : false;
+    return $call !== false ? (empty($iysCode) ? $call->list : $call->list[0]) : false;
   }
 
   public static function auth($username, $password, $iyscode=null){

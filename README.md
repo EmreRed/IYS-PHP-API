@@ -13,7 +13,7 @@ IYS::auth($username, $password, $iyscode);
 `$iyscode` : IYS Numarası  
 
 ---
-
+    
 #### BRAND
 ```php
 IYS::brand($iysCode);
@@ -22,7 +22,7 @@ IYS::brand($iysCode);
 (Girilmezse yetkili tüm markalar listelenir)  
 
 ---
-  
+
 #### DİĞER PARAMETRELER
 ```php
 IYS::get(IYS::ERROR); // Alınan son hatayı getirir.
