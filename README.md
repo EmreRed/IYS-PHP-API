@@ -8,9 +8,9 @@ $iys = new IYS($username, $password, $iyscode);
 /* veya */
 IYS::auth($username, $password, $iyscode);
 ```
-`$username`: IYS API Kullanıcı Adı *
-`$password`: IYS API Parolası *
-`$iyscode` : IYS Numarası
+`$username`: IYS API Kullanıcı Adı *  
+`$password`: IYS API Parolası *  
+`$iyscode` : IYS Numarası  
 
 ---
 
@@ -18,9 +18,8 @@ IYS::auth($username, $password, $iyscode);
 ```php
 IYS::brand($iysCode);
 ```
-`$iysCode`: Hizmet sağlayıcı İYS Numarası
+`$iysCode`: Hizmet sağlayıcı İYS Numarası  
 (Girilmezse yetkili tüm markalar listelenir)
-
 ---
 
 #### DİĞER PARAMETRELER
