@@ -13,13 +13,47 @@ IYS::auth($username, $password, $iyscode);
 `$iyscode` : IYS Numarası  
 
 ---
-    
+
 #### BRAND
 ```php
 IYS::brand($iysCode);
 ```
 `$iysCode`: Hizmet sağlayıcı İYS Numarası  
 (Girilmezse yetkili tüm markalar listelenir)  
+
+---
+
+#### TEKİL İZİN EKLEME
+```php
+IYS::consent($brandCode, $recipient, $type, $source, $status, $consentDate, $recipientType);
+```
+`$brandCode` *  
+`$recipient` *  
+`$type` *  
+`$source` *  
+`$status` *  
+`$consentDate`
+`$recipientType`
+
+---
+
+#### ÇOKLU İZİN EKLEME (ASYNC)
+```php
+IYS::consent($brandCode, $data);
+```
+`$brandCode` *
+`$data`: [
+  [
+    'recipient' => '',
+    'type' => '',
+    'source' => '',
+    'status' => '',
+    'consentDate' => ''
+  ],
+  .
+  .
+  .
+]
 
 ---
 
