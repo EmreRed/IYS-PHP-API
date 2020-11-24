@@ -60,6 +60,34 @@ IYS::consent($brandCode, $data);
 
 ---
 
+#### ÇOKLU İZİN EKLEME DURUMU (ASYNC)
+```php
+IYS::status($brandCode, $requestId);
+```
+`$brandCode` *  
+`$requestId`: *
+
+---
+
+#### TEKİL İZİN SORGULAMA (ASYNC)
+```php
+IYS::status($brandCode, $recipient, $recipientType, $type);
+```
+`$brandCode` *  
+`$recipient`: *
+`$recipientType`: *
+`$type`: *
+
+---
+
+#### İZİN HAREKETİ
+```php
+IYS::changes($brandCode);
+```
+`$brandCode` *  
+
+---
+
 #### DİĞER PARAMETRELER
 ```php
 IYS::get(IYS::ERROR); // Alınan son hatayı getirir.
