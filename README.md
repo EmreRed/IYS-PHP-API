@@ -32,7 +32,7 @@ IYS::consent($brandCode, $recipient, $type, $source, $status, $consentDate, $rec
 `$type` *  
 `$source` *  
 `$status` *  
-`$consentDate`
+`$consentDate`  
 `$recipientType`
 
 ---
@@ -41,8 +41,10 @@ IYS::consent($brandCode, $recipient, $type, $source, $status, $consentDate, $rec
 ```php
 IYS::consent($brandCode, $data);
 ```
-`$brandCode` *
-`$data`: [
+`$brandCode` *  
+`$data`:
+```php
+[
   [
     'recipient' => '',
     'type' => '',
@@ -54,6 +56,7 @@ IYS::consent($brandCode, $data);
   .
   .
 ]
+```
 
 ---
 
