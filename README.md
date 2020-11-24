@@ -74,9 +74,9 @@ IYS::status($brandCode, $requestId);
 IYS::status($brandCode, $recipient, $recipientType, $type);
 ```
 `$brandCode` *  
-`$recipient`: *
-`$recipientType`: *
-`$type`: *
+`$recipient`: *  
+`$recipientType`: *  
+`$type`: *  
 
 ---
 
