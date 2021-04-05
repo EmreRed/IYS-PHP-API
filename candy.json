@@ -1,0 +1,7 @@
+{
+    "name": "IYS",
+    "autoload": [
+        "IYS.php"
+    ],
+    "return": "IYS"
+}
