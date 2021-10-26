@@ -2,11 +2,23 @@
 
 iys.org.tr için PHP API Sınıfıdır.
 
+### SETUP
+```php
+// For Pure PHP (You have to download the files first)
+include('IYS.php'); 
+$iys = EmreRed\IYS();
+
+// For Candy PHP (No processing needed, you can use it directly. 😉)
+$iys = Candy::plugin('EmreRed/IYS-PHP-API'); 
+```
+<a href="https://github.com/CandyPack/CandyPHP">🍭 Check out CandyPHP!</a>
+
+<hr>
+
+### ENTEGRATOR
 #### AUTH
 ```php
-$iys = new IYS($username, $password, $iyscode);
-/* veya */
-IYS::auth($username, $password, $iyscode);
+$integrator = $iys->integrator($username, $password, $iyscode);
 ```
 `$username`: IYS API Kullanıcı Adı *  
 `$password`: IYS API Parolası *  
@@ -16,7 +28,7 @@ IYS::auth($username, $password, $iyscode);
 
 #### BRAND
 ```php
-IYS::brand($iysCode);
+$integrator->brand($iysCode);
 ```
 `$iysCode`: Hizmet sağlayıcı İYS Numarası  
 (Girilmezse yetkili tüm markalar listelenir)  
@@ -25,7 +37,7 @@ IYS::brand($iysCode);
 
 #### TEKİL İZİN EKLEME
 ```php
-IYS::consent($brandCode, $recipient, $type, $source, $status, $consentDate, $recipientType);
+$integrator->consent($brandCode, $recipient, $type, $source, $status, $consentDate, $recipientType);
 ```
 `$brandCode` *  
 `$recipient` *  
@@ -39,7 +51,7 @@ IYS::consent($brandCode, $recipient, $type, $source, $status, $consentDate, $rec
 
 #### ÇOKLU İZİN EKLEME (ASYNC)
 ```php
-IYS::consent($brandCode, $data);
+$integrator->consent($brandCode, $data);
 ```
 `$brandCode` *  
 `$data`:
@@ -62,7 +74,7 @@ IYS::consent($brandCode, $data);
 
 #### ÇOKLU İZİN EKLEME DURUMU (ASYNC)
 ```php
-IYS::status($brandCode, $requestId);
+$integrator->status($brandCode, $requestId);
 ```
 `$brandCode` *  
 `$requestId`: *
@@ -71,7 +83,7 @@ IYS::status($brandCode, $requestId);
 
 #### TEKİL İZİN SORGULAMA (ASYNC)
 ```php
-IYS::status($brandCode, $recipient, $recipientType, $type);
+$integrator->status($brandCode, $recipient, $recipientType, $type);
 ```
 `$brandCode` *  
 `$recipient`: *  
@@ -82,7 +94,7 @@ IYS::status($brandCode, $recipient, $recipientType, $type);
 
 #### İZİN HAREKETİ
 ```php
-IYS::changes($brandCode);
+$integrator->changes($brandCode);
 ```
 `$brandCode` *  
 
@@ -90,12 +102,12 @@ IYS::changes($brandCode);
 
 #### DİĞER PARAMETRELER
 ```php
-IYS::get(IYS::ERROR); // Alınan son hatayı getirir.
-IYS::get(IYS::ERROR_DESC); // Alınan son hata açıklamasını getirir.
+$integrator->get(EmreRed\IYS::ERROR); // Alınan son hatayı getirir.
+$integrator->get(EmreRed\IYS::ERROR_DESC); // Alınan son hata açıklamasını getirir.
 
-IYS::get(IYS::REQUEST); // Yapılan son isteği getirir.
-IYS::get(IYS::REQUEST_URL); // Yapılan son istek url adresini getirir.
+$integrator->get(EmreRed\IYS::REQUEST); // Yapılan son isteği getirir.
+$integrator->get(EmreRed\IYS::REQUEST_URL); // Yapılan son istek url adresini getirir.
 
-IYS::get(IYS::RESULT); // Yapılan son istek cevabını adresini getirir.
-IYS::get(IYS::RESULT_CODE); // Yapılan son istek cevabının http kodunu getirir.
+$integrator->get(EmreRed\IYS::RESULT); // Yapılan son istek cevabını adresini getirir.
+$integrator->get(EmreRed\IYS::RESULT_CODE); // Yapılan son istek cevabının http kodunu getirir.
 ```
