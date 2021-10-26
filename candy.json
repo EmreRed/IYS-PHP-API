@@ -1,7 +1,7 @@
 {
-    "name": "EmreRed\IYS",
-    "autoload": [
-        "IYS.php"
-    ],
-    "return": "\EmreRed\IYS"
+   "name":"EmreRed\\IYS",
+   "autoload":[
+      "IYS.php"
+   ],
+   "return":"\\EmreRed\\IYS"
 }
