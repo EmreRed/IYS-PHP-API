@@ -19,7 +19,7 @@ class Ahs {
   public static function rejecteds($brandCode, $recipientType, $data, $type = "MESAJ"){
     $data = array_map(function($val){ return substr($val,0,1) !== '+' ? "+$val" : $val; }, $data);
     $json = self::call("brands/$brandCode/consents/$recipientType/rejected/$type", ['recipients'=> $data]);
-    return array_map(function($v){ return substr($v,1); }, $json->list);
+    return array_map(function($v){ return substr($v,1); }, ($json->list ?? []));
   }
 
   private static function call($action, $data=[]){
